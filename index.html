@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leïla SONGUIYO — Business Analyst | Data Governance | Data Analyst</title>
+  <title>Leïla SONGUIYO — Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -33,7 +33,7 @@
     .nav-links a { color: var(--grey-100); text-decoration: none; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
     .nav-links a:hover, .nav-links a.active { color: var(--gold); }
 
-    /* HERO */
+    /* HERO EN-TÊTE CORRIGÉ */
     #hero {
       min-height: 100vh;
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1A3A6B 100%);
@@ -46,17 +46,15 @@
       pointer-events: none;
     }
     .hero-eyebrow { font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1.2rem; }
-    .hero-name { font-family: 'Playfair Display', serif; font-size: clamp(2.6rem, 5.5vw, 4.5rem); color: var(--white); line-height: 1.1; margin-bottom: 0.6rem; }
-    .hero-title { font-size: clamp(0.95rem, 1.8vw, 1.25rem); color: var(--gold-light); font-weight: 300; margin-bottom: 1rem; }
-    .hero-targets {
-      display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.8rem;
-    }
+    .hero-name { font-family: 'Playfair Display', serif; font-size: clamp(2.6rem, 5.5vw, 4.5rem); color: var(--white); line-height: 1.1; margin-bottom: 0.8rem; }
+    .hero-title { font-size: clamp(1.1rem, 2.2vw, 1.6rem); color: var(--white); font-weight: 600; margin-bottom: 1.5rem; border-left: 3px solid var(--gold); padding-left: 1rem; }
+    .hero-targets { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
     .hero-target-badge {
       background: rgba(201,168,76,0.13); border: 1px solid rgba(201,168,76,0.35);
-      color: var(--gold-light); font-size: 0.72rem; font-weight: 600;
-      padding: 0.3rem 0.8rem; border-radius: 2px; letter-spacing: 0.06em;
+      color: var(--gold-light); font-size: 0.75rem; font-weight: 600;
+      padding: 0.35rem 0.9rem; border-radius: 2px; letter-spacing: 0.06em;
     }
-    .hero-desc { max-width: 560px; color: var(--grey-100); font-size: 0.97rem; font-weight: 300; line-height: 1.85; margin-bottom: 2.5rem; }
+    .hero-desc { max-width: 650px; color: var(--grey-100); font-size: 1rem; font-weight: 300; line-height: 1.8; margin-bottom: 2.5rem; }
     .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
     .btn-primary { background: var(--gold); color: var(--navy); padding: 0.75rem 2rem; border-radius: 2px; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: background 0.2s, transform 0.15s; }
     .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
@@ -64,11 +62,11 @@
     .btn-outline:hover { background: rgba(201,168,76,0.1); }
 
     /* SECTIONS */
-    section { padding: 100px 10%; }
+    section { padding: 90px 10%; }
     .section-label { font-size: 0.73rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.6rem; }
-    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 3vw, 2.6rem); color: var(--navy); margin-bottom: 0.8rem; line-height: 1.2; }
-    .section-subtitle { font-size: 0.97rem; color: var(--grey-600); max-width: 560px; margin-bottom: 3rem; }
-    .divider { width: 56px; height: 3px; background: linear-gradient(90deg, var(--gold), transparent); margin-bottom: 3rem; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 3vw, 2.4rem); color: var(--navy); margin-bottom: 0.8rem; line-height: 1.2; }
+    .section-subtitle { font-size: 0.97rem; color: var(--grey-600); max-width: 560px; margin-bottom: 2.5rem; }
+    .divider { width: 56px; height: 3px; background: linear-gradient(90deg, var(--gold), transparent); margin-bottom: 2.5rem; }
 
     /* SKILLS */
     #skills { background: var(--navy); }
@@ -82,74 +80,55 @@
       color: var(--grey-100); font-size: 0.82rem; font-weight: 500;
       padding: 0.45rem 1.1rem; border-radius: 2px;
       display: flex; align-items: center; gap: 0.5rem;
-      transition: border-color 0.2s, color 0.2s;
     }
-    .skill-pill:hover { border-color: var(--gold); color: var(--gold-light); }
     .skill-pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
 
     /* PROJECTS */
     #projects { background: var(--grey-100); }
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.2rem; }
-    .project-card { 
-      background: white; border-radius: 6px; overflow: hidden; 
-      border: 1px solid #DDE3ED; transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s; 
-      display: flex; flex-direction: column; height: 100%;
-    }
-    .project-card:hover { 
-      box-shadow: 0 1px 16px 45px rgba(13,27,42,0.1); 
-      transform: translateY(-6px); 
-      border-color: rgba(201,168,76,0.5);
-    }
+    .project-card { background: white; border-radius: 6px; overflow: hidden; border: 1px solid #DDE3ED; display: flex; flex-direction: column; height: 100%; transition: transform 0.2s, box-shadow 0.2s; }
+    .project-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(13,27,42,0.08); }
     .project-header { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); padding: 2rem 2rem 1.5rem; }
     .project-tag { display: inline-block; background: rgba(201,168,76,0.18); color: var(--gold-light); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 2px; margin-bottom: 0.8rem; }
-    .project-title { font-size: 1.15rem; font-weight: 700; color: white; line-height: 1.35; font-family: 'Inter', sans-serif; }
-    .project-collab { font-size: 0.72rem; color: var(--grey-400); margin-top: 0.5rem; letter-spacing: 0.05em; }
+    .project-title { font-size: 1.15rem; font-weight: 700; color: white; line-height: 1.35; }
+    .project-collab { font-size: 0.72rem; color: var(--grey-400); margin-top: 0.5rem; }
     .project-body { padding: 1.8rem; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
     .project-desc { font-size: 0.9rem; color: var(--grey-600); margin-bottom: 1rem; line-height: 1.8; }
     .project-contrib { font-size: 0.85rem; color: var(--accent); font-weight: 600; margin-bottom: 1.4rem; padding-left: 0.5rem; border-left: 2px solid var(--gold); }
     .project-techs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
     .tech-badge { background: var(--white); color: var(--navy); font-size: 0.72rem; font-weight: 600; padding: 0.2rem 0.7rem; border-radius: 4px; border: 1px solid #D1D9E3; }
-    
-    .project-file-btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
-      background: transparent; border: 1px dashed var(--grey-400); color: var(--grey-600);
-      padding: 0.6rem 1rem; font-size: 0.8rem; font-weight: 500; text-decoration: none;
-      border-radius: 4px; transition: all 0.2s ease; margin-top: auto;
-    }
-    .project-file-btn:hover {
-      border-color: var(--accent); color: var(--accent); background: rgba(42,110,187,0.04);
-    }
+    .project-file-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; border: 1px dashed var(--grey-400); color: var(--grey-600); padding: 0.6rem 1rem; font-size: 0.8rem; text-decoration: none; border-radius: 4px; margin-top: auto; }
 
-    /* EXPERIENCE */
-    #experience { background: white; }
+    /* TIMELINE (USED FOR EXP & FORMATION) */
     .timeline { position: relative; padding-left: 2rem; }
     .timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: linear-gradient(to bottom, var(--gold), var(--grey-100)); }
-    .timeline-item { position: relative; margin-bottom: 3rem; }
+    .timeline-item { position: relative; margin-bottom: 2.5rem; }
     .timeline-dot { position: absolute; left: -2.45rem; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--gold); border: 2px solid white; box-shadow: 0 0 0 3px rgba(201,168,76,0.2); }
     .timeline-date { font-size: 0.76rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
-    .timeline-role { font-size: 1.08rem; font-weight: 700; color: var(--navy); margin-bottom: 0.15rem; }
-    .timeline-company { font-size: 0.88rem; color: var(--accent); font-weight: 600; margin-bottom: 0.6rem; }
+    .timeline-role { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.15rem; }
+    .timeline-company { font-size: 0.9rem; color: var(--accent); font-weight: 600; margin-bottom: 0.6rem; }
     .timeline-desc { font-size: 0.88rem; color: var(--grey-600); line-height: 1.8; padding-left: 1rem; }
-    .timeline-desc li { margin-bottom: 0.3rem; list-style: disc; }
+    .timeline-desc li { margin-bottom: 0.4rem; list-style: disc; }
+
+    #experience { background: white; }
+    #formation { background: var(--white); }
 
     /* CONTACT */
     #contact { background: var(--navy); text-align: center; }
-    #contact .section-label { color: var(--gold); }
-    #contact .section-title { color: white; margin-bottom: 0.8rem; }
+    #contact .section-title { color: white; }
     #contact .section-subtitle { color: var(--grey-400); margin: 0 auto 2.5rem; }
     .contact-links { display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap; }
-    .contact-link { display: flex; align-items: center; gap: 0.5rem; color: var(--gold-light); text-decoration: none; font-size: 0.88rem; font-weight: 500; padding: 0.65rem 1.4rem; border: 1px solid rgba(201,168,76,0.3); border-radius: 2px; transition: border-color 0.2s, background 0.2s; }
-    .contact-link:hover { border-color: var(--gold); background: rgba(201,168,76,0.08); }
+    .contact-link { display: flex; align-items: center; gap: 0.5rem; color: var(--gold-light); text-decoration: none; font-size: 0.88rem; font-weight: 500; padding: 0.65rem 1.4rem; border: 1px solid rgba(201,168,76,0.3); border-radius: 2px; }
     .dispo-badge { display: inline-block; background: rgba(52,211,153,0.15); border: 1px solid rgba(52,211,153,0.4); color: #6EE7B7; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 2px; margin-bottom: 1.5rem; }
     .dispo-badge::before { content: '● '; font-size: 0.6rem; }
 
     footer { background: #08131E; color: var(--grey-400); text-align: center; padding: 1.5rem; font-size: 0.78rem; border-top: 1px solid rgba(201,168,76,0.1); }
 
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
     @media (max-width: 768px) {
-      section { padding: 70px 6%; }
+      section { padding: 60px 6%; }
       #hero { padding: 0 6%; }
       .nav-links { display: none; }
     }
@@ -161,79 +140,83 @@
   <ul class="nav-links">
     <li><a href="#skills">Compétences</a></li>
     <li><a href="#projects">Projets</a></li>
-    <li><a href="#experience">Parcours</a></li>
+    <li><a href="#experience">Expériences</a></li>
+    <li><a href="#formation">Formations</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
+<!-- HERO EN-TÊTE ET ACCROCHE VISUELLE -->
 <section id="hero">
-  <p class="hero-eyebrow">Portfolio · Profil Polyvalent &amp; Hybride</p>
-  <h1 class="hero-name">Leïla<br>SONGUIYO</h1>
-  <p class="hero-title">Business Analyst · Data Governance · Data Analyst · Chef de Projet Junior / PMO</p>
+  <p class="hero-eyebrow">Portfolio Professionnel</p>
+  <h1 class="hero-name">Leïla SONGUIYO</h1>
+  <p class="hero-title">Business Analyst · Data Governance · Data Analyst</p>
+  
   <div class="hero-targets">
     <span class="hero-target-badge">Business Analyst</span>
-    <span class="hero-target-badge">Data Governance</span>
-    <span class="hero-target-badge">Data Analyst</span>
+    <span class="hero-target-badge">Data Governance Partner</span>
+    <span class="hero-target-badge">Data Analyst / BI</span>
     <span class="hero-target-badge">Chef de Projet Junior / PMO</span>
     <span class="hero-target-badge">Gestion de Production</span>
   </div>
+
   <p class="hero-desc">
-    Bientôt diplômée du Master 2 MIASHS (Ingénierie et Science des Données appliquées à la Gestion de Production) à l'Université Toulouse Jean Jaurès[cite: 2, 3]. Passionnée par la **structuration des données**, l'**analyse métier** et la **création de dashboards opérationnels** pour maximiser la performance collective[cite: 2, 3, 4]. Forte de 2 ans d'expérience chez Airbus Atlantic[cite: 2, 3, 4]. Disponible dès septembre 2026 pour un CDI (Mobile France entière)[cite: 2, 3].
+    Bientôt diplômée du Master 2 MIASHS (Ingénierie et Science des Données appliquées à la Gestion de Production) à l'Université Toulouse Jean Jaurès[cite: 2, 3]. Mon profil associe une solide expertise en **gouvernance et structuration de données** acquise au sein d'Airbus Atlantic, à des compétences de pointe en **analyse métier (Business Analysis)** et **reporting décisionnel**[cite: 2, 3, 4]. Disponible dès septembre 2026 pour un poste en CDI (Mobile France entière)[cite: 2, 3].
   </p>
+
   <div class="hero-cta">
-    <a href="#projects" class="btn-primary">Voir mes projets</a>
+    <a href="#projects" class="btn-primary">Découvrir mes projets</a>
     <a href="#contact" class="btn-outline">Me contacter</a>
   </div>
 </section>
 
+<!-- DOMAINES DE COMPÉTENCE -->
 <section id="skills">
   <p class="section-label">Expertise</p>
   <h2 class="section-title">Domaines de compétence</h2>
-  <p class="section-subtitle">Une synergie unique de compétences orientées processus métiers, gouvernance et valorisation des données.</p>
+  <p class="section-subtitle">Une approche transverse structurée autour des processus, de la qualité et de la valorisation de la donnée.</p>
   <div class="divider"></div>
   <div class="skills-categories reveal">
 
     <div>
-      <div class="skill-category-label">1. Business Analysis</div>
+      <div class="skill-category-label">1. Business Analysis &amp; Processus</div>
       <div class="skills-row">
-        <span class="skill-pill"><span class="dot"></span>Recueil &amp; Analyse des besoins[cite: 3, 4]</span>
-        <span class="skill-pill"><span class="dot"></span>Rédaction de Spécifications Fonctionnelles / Cahier des charges[cite: 2, 3]</span>
-        <span class="skill-pill"><span class="dot"></span>Modélisation de processus (BPMN, UML)[cite: 3, 4]</span>
-        <span class="skill-pill"><span class="dot"></span>Interface Métier / IT &amp; Alignement stratégique[cite: 2, 3]</span>
+        <span class="skill-pill"><span class="dot"></span>Recueil, analyse et cadrage des besoins métiers[cite: 3, 4]</span>
+        <span class="skill-pill"><span class="dot"></span>Rédaction de spécifications fonctionnelles &amp; Cahiers des charges[cite: 2, 3]</span>
+        <span class="skill-pill"><span class="dot"></span>Modélisation de processus organisationnels (BPMN, UML)[cite: 3, 4]</span>
+        <span class="skill-pill"><span class="dot"></span>Interface transversale entre équipes métiers, IT et Gouvernance[cite: 2, 3]</span>
       </div>
     </div>
 
     <div>
-      <div class="skill-category-label">2. Data Governance &amp; Data Management</div>
+      <div class="skill-category-label">2. Data Governance &amp; Management</div>
       <div class="skills-row">
-        <span class="skill-pill"><span class="dot"></span>Structuration des Référentiels (Data Catalog, Data Galaxy)[cite: 3, 4]</span>
-        <span class="skill-pill"><span class="dot"></span>Data Quality (Analyse &amp; Priorisation des dimensions)[cite: 4]</span>
-        <span class="skill-pill"><span class="dot"></span>Pilotage des KPIs de Governance &amp; Adoption[cite: 2, 4]</span>
-        <span class="skill-pill"><span class="dot"></span>Documentation &amp; Tests Fonctionnels (Datalake Gen2)[cite: 2, 4]</span>
-        <span class="skill-pill"><span class="dot"></span>Référentiel DMBOK (Bonnes connaissances)[cite: 4]</span>
+        <span class="skill-pill"><span class="dot"></span>Structuration de référentiels &amp; Data Catalog (Data Galaxy)[cite: 3, 4]</span>
+        <span class="skill-pill"><span class="dot"></span>Gestion et priorisation des dimensions de Data Quality[cite: 4]</span>
+        <span class="skill-pill"><span class="dot"></span>Définition et pilotage des indicateurs de gouvernance &amp; adoption[cite: 2, 4]</span>
+        <span class="skill-pill"><span class="dot"></span>Documentation fonctionnelle &amp; tests (Connecteur DataLake Gen2)[cite: 2, 4]</span>
+        <span class="skill-pill"><span class="dot"></span>Bonnes connaissances du référentiel DMBOK[cite: 4]</span>
       </div>
     </div>
 
     <div>
       <div class="skill-category-label">3. Data Analytics &amp; Visualisation (BI)</div>
       <div class="skills-row">
-        <span class="skill-pill"><span class="dot"></span>Nettoyage &amp; Préparation des données (Python pandas/numpy)[cite: 4]</span>
-        <span class="skill-pill"><span class="dot"></span>Création de Reportings &amp; Dashboards d'aide à la décision[cite: 4]</span>
-        <span class="skill-pill"><span class="dot"></span>Power BI &amp; Looker Studio (Conception avancée)[cite: 2, 3, 4]</span>
-        <span class="skill-pill"><span class="dot"></span>Excel Avancé (TCD, Macros VBA)[cite: 4]</span>
-        <span class="skill-pill"><span class="dot"></span>SQL &amp; Python (Analyse descriptive et prédictive)[cite: 2, 3, 4]</span>
-        <span class="skill-pill"><span class="dot"></span>Automatisation de flux et outils de reporting (Google Apps Script)[cite: 2, 3, 4]</span>
+        <span class="skill-pill"><span class="dot"></span>Conception avancée de tableaux de bord (Power BI, Looker Studio)[cite: 2, 3, 4]</span>
+        <span class="skill-pill"><span class="dot"></span>Nettoyage et préparation de données (Python Pandas/Numpy, Excel)[cite: 4]</span>
+        <span class="skill-pill"><span class="dot"></span>Analyse de données et requêtage (SQL, Python)[cite: 2, 3, 4]</span>
+        <span class="skill-pill"><span class="dot"></span>Automatisation de flux et de reportings (Google Apps Script)[cite: 2, 3, 4]</span>
+        <span class="skill-pill"><span class="dot"></span>Storytelling des données pour l'aide à la décision[cite: 2, 4]</span>
       </div>
     </div>
 
     <div>
-      <div class="skill-category-label">4. Pilotage de Projet, PMO &amp; Gestion de Production</div>
+      <div class="skill-category-label">4. Pilotage de Projet &amp; Gestion de Production</div>
       <div class="skills-row">
-        <span class="skill-pill"><span class="dot"></span>Pilotage multi-métiers &amp; Coordination transverse[cite: 3]</span>
-        <span class="skill-pill"><span class="dot"></span>Suivi QCSD, Gestion des risques &amp; Plans d'action[cite: 3]</span>
-        <span class="skill-pill"><span class="dot"></span>Méthodologies Agiles / Kanban (Trello, Confluence, LBIP)[cite: 3, 4]</span>
-        <span class="skill-pill"><span class="dot"></span>Suivi opérationnel de production (OF, Approvisionnements)[cite: 3]</span>
-        <span class="skill-pill"><span class="dot"></span>Amélioration Continue (PDCA, Lean, 5 Why, Kaizen, VSM)[cite: 3]</span>
+        <span class="skill-pill"><span class="dot"></span>Pilotage et coordination de groupes de travail multi-métiers[cite: 3]</span>
+        <span class="skill-pill"><span class="dot"></span>Suivi des jalons, gestion des risques et des points bloquants (QCSD)[cite: 3]</span>
+        <span class="skill-pill"><span class="dot"></span>Suivi opérationnel des flux de production &amp; Ordres de Fabrication[cite: 3]</span>
+        <span class="skill-pill"><span class="dot"></span>Amélioration continue (PDCA, Lean Management, Kaizen, 5 Why)[cite: 3]</span>
         <span class="skill-pill"><span class="dot"></span>Maîtrise Statistique des Procédés (MSP) &amp; Cartes de contrôle[cite: 3]</span>
       </div>
     </div>
@@ -241,10 +224,11 @@
   </div>
 </section>
 
+<!-- RÉALISATIONS -->
 <section id="projects">
-  <p class="section-label">Réalisations</p>
-  <h2 class="section-title">Projets sélectionnés</h2>
-  <p class="section-subtitle">Exemples concrets de projets universitaires et professionnels illustrant l'application de mes compétences.</p>
+  <p class="section-label">Projets</p>
+  <h2 class="section-title">Réalisations sélectionnées</h2>
+  <p class="section-subtitle">Travaux illustrant l'intégration de la vision business et de la manipulation technique de la donnée.</p>
   <div class="divider"></div>
   <div class="projects-grid">
 
@@ -252,66 +236,46 @@
       <div class="project-header">
         <span class="project-tag">Business Analysis · Power BI</span>
         <div class="project-title">Optimisation du processus de facturation énergétique (SGE)</div>
-        <div class="project-collab">Projet académique — 2026</div>
+        <div class="project-collab">Projet Académique — 2026</div>
       </div>
       <div class="project-body">
-        <p class="project-desc">Diagnostic de processus métier, requêtage et détection d'anomalies de données, et implémentation de dashboards Power BI pour optimiser la qualité du flux.</p>
-        <p class="project-contrib">→ Modélisation BPMN du processus, requêtage SQL analytique, conception des rapports de pilotage Power BI.</p>
+        <p class="project-desc">Cartographie fonctionnelle complète du processus métier, requêtage analytique pour cibler les anomalies de données, et création de rapports Power BI pour fiabiliser le suivi opérationnel.</p>
         <div class="project-techs">
           <span class="tech-badge">Power BI</span>
           <span class="tech-badge">SQL</span>
           <span class="tech-badge">BPMN</span>
           <span class="tech-badge">Data Quality</span>
         </div>
-        <a href="#" target="_blank" class="project-file-btn">Voir le livrable 📄</a>
+        <a href="#" target="_blank" class="project-file-btn">Consulter le livrable 📄</a>
       </div>
     </div>
 
     <div class="project-card reveal">
       <div class="project-header">
-        <span class="project-tag">Data Analytics · Machine Learning</span>
-        <div class="project-title">Analyse prédictive &amp; Dataviz — TikTok vs YouTube</div>
-        <div class="project-collab">Projet académique — 2025</div>
+        <span class="project-tag">Data Analytics · Python</span>
+        <div class="project-title">Analyse prédictive et Dataviz — TikTok vs YouTube</div>
+        <div class="project-collab">Projet Académique — 2025</div>
       </div>
       <div class="project-body">
-        <p class="project-desc">Mise en place d'un flux complet, construction d'un datamart et intégration de modèles prédictifs pour mesurer la performance de diffusion.</p>
-        <p class="project-contrib">→ Nettoyage des données massives avec Python, modélisation relationnelle et création des visualisations interactives.</p>
+        <p class="project-desc">Extraction et structuration d'un grand volume de données de diffusion. Nettoyage de bout en bout et déploiement de modèles prédictifs de performance pour comparer l'impact des plateformes.</p>
         <div class="project-techs">
-          <span class="tech-badge">Power BI</span>
           <span class="tech-badge">Python</span>
           <span class="tech-badge">Pandas</span>
-          <span class="tech-badge">Data Preparation</span>
+          <span class="tech-badge">Power BI</span>
+          <span class="tech-badge">Predictive Analytics</span>
         </div>
-        <a href="#" target="_blank" class="project-file-btn">Voir le livrable 📄</a>
-      </div>
-    </div>
-
-    <div class="project-card reveal">
-      <div class="project-header">
-        <span class="project-tag">Processus · Organisation</span>
-        <div class="project-title">Modélisation &amp; Amélioration de processus métier</div>
-        <div class="project-collab">Projet d'ingénierie d'études</div>
-      </div>
-      <div class="project-body">
-        <p class="project-desc">Cartographie de bout en bout des flux d'information pour la détection de goulots d'étranglement organisationnels.</p>
-        <p class="project-contrib">→ Animation des ateliers de recueil des besoins auprès des experts métiers et rédaction du dossier de spécifications.</p>
-        <div class="project-techs">
-          <span class="tech-badge">BPMN</span>
-          <span class="tech-badge">Draw.io</span>
-          <span class="tech-badge">Confluence</span>
-          <span class="tech-badge">Analyse Métier</span>
-        </div>
-        <a href="#" target="_blank" class="project-file-btn">Voir le livrable 📄</a>
+        <a href="#" target="_blank" class="project-file-btn">Consulter le livrable 📄</a>
       </div>
     </div>
 
   </div>
 </section>
 
+<!-- SECTION EXPÉRIENCES (SÉPARÉE) -->
 <section id="experience">
   <p class="section-label">Parcours</p>
-  <h2 class="section-title">Expériences &amp; Formation</h2>
-  <p class="section-subtitle">Une trajectoire solide alliant immersion au sein de grands groupes industriels et rigueur académique.</p>
+  <h2 class="section-title">Expériences professionnelles</h2>
+  <p class="section-subtitle">Une immersion de deux ans dans le secteur aéronautique et une expertise terrain en gestion de production.</p>
   <div class="divider"></div>
   <div class="timeline">
 
@@ -319,12 +283,12 @@
       <div class="timeline-dot"></div>
       <div class="timeline-date">Sept. 2025 — Août 2026[cite: 2, 3]</div>
       <div class="timeline-role">Data Governance Business Partner[cite: 2, 3]</div>
-      <div class="timeline-company">Airbus Atlantic · Toulouse — Alternance (11 mois)[cite: 2, 3]</div>
+      <div class="timeline-company">Airbus Atlantic · Toulouse — Alternance M2[cite: 2, 3]</div>
       <ul class="timeline-desc">
-        <li>**Data Governance &amp; Management** : Refondu le modèle des métadonnées dans Data Galaxy, animé le weekly Data Catalog et géré la structuration dans l'outil[cite: 2, 4].</li>
-        <li>**Business Analysis** : Assuré l'alignement et la coordination entre les équipes IT, business et gouvernance[cite: 2]. Analysé et priorisé les dimensions de Data Quality[cite: 4].</li>
-        <li>**BI &amp; Data Analytics** : Défini les KPIs opérationnels et déployé des dashboards analytiques (Power BI / Looker Studio) pour le pilotage des streams de la direction[cite: 2, 4].</li>
-        <li>**PMO &amp; Test Management** : Piloté des groupes de travail multi-métiers, préparé et conduit les plans de tests fonctionnels pour le connecteur DataLake Gen2[cite: 2, 3, 4].</li>
+        <li>**Data Governance** : Refonte globale du modèle de métadonnées dans Data Galaxy et animation hebdomadaire du comité Data Catalog[cite: 4]. Analyse et priorisation des critères de Data Quality[cite: 4].</li>
+        <li>**Business Analysis &amp; Alignement** : Rôle d'interface et de coordination transverse entre les équipes IT, business et gouvernance globale[cite: 2].</li>
+        <li>**BI &amp; Analytics** : Définition des indicateurs clés (qualité, activité, adoption) et développement de dashboards Power BI et Looker Studio pour le pilotage de la direction[cite: 2, 4].</li>
+        <li>**PMO &amp; Test Management** : Cadrage et suivi des plans d'action, gestion des risques et réalisation des séances de tests fonctionnels pour le connecteur DataLake Gen2[cite: 2, 3, 4].</li>
       </ul>
     </div>
 
@@ -334,9 +298,9 @@
       <div class="timeline-role">Stagiaire Data Governance[cite: 2, 3]</div>
       <div class="timeline-company">Airbus Atlantic · Toulouse — Stage M1[cite: 2, 3]</div>
       <ul class="timeline-desc">
-        <li>**Data Management** : Pris en main et optimisé le Data Catalog Airbus pour documenter et structurer les livrables du programme[cite: 2, 3, 4].</li>
-        <li>**Automation &amp; Analytics** : Automatisé le template d'import via Google Apps Script (Interface web / Google Sheets) pour éliminer les tâches répétitives[cite: 2, 3, 4].</li>
-        <li>**Reporting KPI** : Analysé et fait évoluer les tableaux de bord existants sous Looker Studio et Power BI[cite: 2, 3, 4].</li>
+        <li>**Data Cataloging** : Structuration, documentation et standardisation des livrables du programme au sein du Data Catalog Airbus[cite: 2, 3, 4].</li>
+        <li>**Automatisation** : Conception de scripts d'automatisation via Google Apps Script pour l'intégration de templates d'import, réduisant les tâches manuelles répétitives[cite: 2, 3, 4].</li>
+        <li>**Reporting KPI** : Analyse de la pertinence des indicateurs de suivi existants et mise à jour des rapports sous Looker Studio[cite: 2, 4].</li>
       </ul>
     </div>
 
@@ -346,41 +310,53 @@
       <div class="timeline-role">Assistante en Gestion de Production[cite: 3]</div>
       <div class="timeline-company">TeaMagine · Toulouse — Stage M1[cite: 3]</div>
       <ul class="timeline-desc">
-        <li>**Gestion des Flux** : Assuré le suivi quotidien des ordres de fabrication (OF) et la planification des approvisionnements[cite: 3].</li>
-        <li>**Amélioration Continue** : Analysé les causes racines (5 Why, Ishikawa) des ruptures et surproductions rencontrées, puis déployé des actions correctives (PDCA)[cite: 3].</li>
-        <li>**Performance Data** : Enregistré et structuré les données de production de l'atelier pour optimiser la traçabilité[cite: 3].</li>
-      </ul>
-    </div>
-
-    <div class="timeline-item reveal">
-      <div class="timeline-dot"></div>
-      <div class="timeline-date">2024 — 2026[cite: 2, 3]</div>
-      <div class="timeline-role">Master 2 MIASHS (Parcours ISM-AG)[cite: 2, 3]</div>
-      <div class="timeline-company">Université Toulouse Jean Jaurès · Toulouse[cite: 2, 3]</div>
-      <ul class="timeline-desc">
-        <li>**Spécialisation** : Ingénierie et Science des Données appliquées à la Gestion de Production[cite: 2, 3].</li>
-        <li>**Matières fondamentales** : Analyse de données, Business Intelligence, Statistiques appliquées, Modélisation de processus, Outils de pilotage de la performance[cite: 2, 3].</li>
-      </ul>
-    </div>
-
-    <div class="timeline-item reveal">
-      <div class="timeline-dot"></div>
-      <div class="timeline-date">2023 — 2024[cite: 2, 3]</div>
-      <div class="timeline-role">Licence MIASHS[cite: 2, 3]</div>
-      <div class="timeline-company">Université Toulouse Jean Jaurès · Toulouse[cite: 2, 3]</div>
-      <ul class="timeline-desc">
-        <li>Mathématiques et Informatique appliquées aux Sciences Humaines et Sociales[cite: 2, 3].</li>
+        <li>**Gestion opérationnelle** : Pilotage et suivi quotidien des flux, ordonnancement des ordres de fabrication (OF) et approvisionnements[cite: 3].</li>
+        <li>**Amélioration Continue** : Analyse méthodique des causes racines (5 Why, Ishikawa) des ruptures de flux et surproductions, et mise en place d'actions correctives (cycle PDCA)[cite: 3].</li>
+        <li>**Données industrielles** : Structuration et mise à jour des référentiels de données de l'atelier pour mesurer la performance globale[cite: 3].</li>
       </ul>
     </div>
 
   </div>
 </section>
 
+<!-- SECTION FORMATIONS (SÉPARÉE) -->
+<section id="formation">
+  <p class="section-label">Cursus</p>
+  <h2 class="section-title">Formations</h2>
+  <p class="section-subtitle">Un parcours universitaire rigoureux centré sur l'application des sciences des données à la gestion d'entreprise.</p>
+  <div class="divider"></div>
+  <div class="timeline">
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2024 — 2026[cite: 2, 3]</div>
+      <div class="timeline-role">Master 2 MIASHS (Parcours ISM-AG)[cite: 2, 3]</div>
+      <div class="timeline-company">Université Toulouse Jean Jaurès · Toulouse[cite: 2, 3]</div>
+      <p class="timeline-desc" style="padding-left:0;">
+        **Ingénierie et Science des Données appliquées à la Gestion de Production**[cite: 2, 3]. Focus majeur : Business Intelligence, statistiques appliquées, modélisation fine de processus métiers, outils de pilotage de la performance, gestion de projet agile[cite: 2, 3].
+      </p>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2023 — 2024[cite: 2, 3]</div>
+      <div class="timeline-role">Licence 3 MIASHS[cite: 3]</div>
+      <div class="timeline-company">Université Toulouse Jean Jaurès · Toulouse[cite: 2, 3]</div>
+      <p class="timeline-desc" style="padding-left:0;">
+        **Mathématiques et Informatique appliquées aux Sciences Humaines et Sociales**[cite: 2, 3]. Socle fondamental en manipulation de données, algorithmique et modélisation statistique.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT & DISPONIBILITÉ -->
 <section id="contact">
-  <p class="section-label">Contact</p>
+  <p class="section-label">Opportunités</p>
   <h2 class="section-title">Travaillons ensemble</h2>
-  <div class="dispo-badge">Disponible dès septembre 2026 — Mobile France entière[cite: 2, 3]</div>
-  <p class="section-subtitle">N'hésitez pas à initier le contact pour échanger sur vos opportunités en Business Analysis, Data Governance ou Data Analytics[cite: 2, 4].</p>
+  <div class="dispo-badge">Disponible dès septembre 2026 — France entière[cite: 2, 3]</div>
+  <p class="section-subtitle">Ouverte aux opportunités en Business Analysis, Data Governance ou Data Management. Échangeons sur vos projets ![cite: 2, 4]</p>
+  
   <div class="contact-links reveal">
     <a href="mailto:leilasonguiyo@gmail.com" class="contact-link">
       <span>✉️</span> leilasonguiyo@gmail.com
@@ -399,22 +375,24 @@
 </footer>
 
 <script>
+  // Animation au défilement (Scroll Reveal)
   const revealEls = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 70);
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
         observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.1 });
   revealEls.forEach(el => observer.observe(el));
 
+  // Gestion dynamique du menu actif
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
   window.addEventListener('scroll', () => {
     let current = '';
-    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) current = s.id; });
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
     navLinks.forEach(a => {
       a.classList.toggle('active', a.getAttribute('href') === '#' + current);
     });
